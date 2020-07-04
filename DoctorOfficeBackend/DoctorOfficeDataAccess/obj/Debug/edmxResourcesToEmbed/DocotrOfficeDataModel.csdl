@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DoctorOfficeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DoctorOfficeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Allergies" EntityType="DoctorOfficeModel.Allergy" />
+    <EntitySet Name="Maladies" EntityType="DoctorOfficeModel.Malady" />
+    <EntitySet Name="Doctors" EntityType="DoctorOfficeModel.Doctor" />
+    <EntitySet Name="Visites" EntityType="DoctorOfficeModel.Visite" />
+    <EntitySet Name="RDVs" EntityType="DoctorOfficeModel.RDV" />
+    <EntitySet Name="Nurses" EntityType="DoctorOfficeModel.Nurse" />
+    <EntitySet Name="Patients" EntityType="DoctorOfficeModel.Patient" />
+  </EntityContainer>
+  <EntityType Name="Allergy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PatID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Malady">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PatID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tel" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BirthDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Visite">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Consultation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MedsList" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ToDoNext" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="VisitDateDay" Type="Int32" Nullable="false" />
+    <Property Name="IDPat" Type="Int32" Nullable="false" />
+    <Property Name="IDDoct" Type="Int32" Nullable="false" />
+    <Property Name="VisitDateMonth" Type="Int32" Nullable="false" />
+    <Property Name="VisitDateYear" Type="Int32" Nullable="false" />
+    <Property Name="VisitTime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RDV">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tel" Type="Int32" />
+    <Property Name="PatID" Type="Int32" />
+    <Property Name="IDDoct" Type="Int32" Nullable="false" />
+    <Property Name="VisitTime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastVisit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NewPat" Type="Boolean" />
+    <Property Name="NbreVisits" Type="Int32" />
+    <Property Name="VisitDateDay" Type="Int32" Nullable="false" />
+    <Property Name="VisitDateMonth" Type="Int32" Nullable="false" />
+    <Property Name="VisitDateYear" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nurse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BirthDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tel" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDDoct" Type="Int32" />
+    <Property Name="JoinDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="Int32" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="LastVisit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NbreVisits" Type="Int32" Nullable="false" />
+    <Property Name="CIN" Type="Int32" />
+    <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDDoct" Type="Int32" />
+  </EntityType>
+</Schema>

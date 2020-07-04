@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DoctorOfficeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Allergies">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PatID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Doctors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tel" Type="int" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Maladies">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PatID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nurses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tel" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDDoct" Type="int" />
+    <Property Name="JoinDate" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="int" />
+    <Property Name="Age" Type="int" />
+    <Property Name="LastVisit" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NbreVisits" Type="int" Nullable="false" />
+    <Property Name="CIN" Type="int" />
+    <Property Name="Adress" Type="varchar" MaxLength="50" />
+    <Property Name="IDDoct" Type="int" />
+  </EntityType>
+  <EntityType Name="RDVs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Tel" Type="int" />
+    <Property Name="PatID" Type="int" />
+    <Property Name="IDDoct" Type="int" Nullable="false" />
+    <Property Name="VisitTime" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastVisit" Type="varchar" MaxLength="50" />
+    <Property Name="NewPat" Type="bit" />
+    <Property Name="NbreVisits" Type="int" />
+    <Property Name="VisitDateDay" Type="int" Nullable="false" />
+    <Property Name="VisitDateMonth" Type="int" Nullable="false" />
+    <Property Name="VisitDateYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Visites">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Consultation" Type="text" />
+    <Property Name="MedsList" Type="text" />
+    <Property Name="ToDoNext" Type="text" />
+    <Property Name="VisitDateDay" Type="int" Nullable="false" />
+    <Property Name="IDPat" Type="int" Nullable="false" />
+    <Property Name="IDDoct" Type="int" Nullable="false" />
+    <Property Name="VisitDateMonth" Type="int" Nullable="false" />
+    <Property Name="VisitDateYear" Type="int" Nullable="false" />
+    <Property Name="VisitTime" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DoctorOfficeModelStoreContainer">
+    <EntitySet Name="Allergies" EntityType="Self.Allergies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Maladies" EntityType="Self.Maladies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nurses" EntityType="Self.Nurses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RDVs" EntityType="Self.RDVs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visites" EntityType="Self.Visites" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

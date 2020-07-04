@@ -1,0 +1,11 @@
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\bin\Debug\DoctorOfficeDataAccess.dll.config
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\bin\Debug\DoctorOfficeDataAccess.dll
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\bin\Debug\DoctorOfficeDataAccess.pdb
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\bin\Debug\EntityFramework.dll
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\bin\Debug\EntityFramework.xml
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\obj\Debug\DoctorOfficeDataAccess.csprojAssemblyReference.cache
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\obj\Debug\DoctorOfficeDataAccess.csproj.CopyComplete
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\obj\Debug\DoctorOfficeDataAccess.dll
+D:\ISET\Project CIM\DoctorOfficeBackend\DoctorOfficeDataAccess\obj\Debug\DoctorOfficeDataAccess.pdb

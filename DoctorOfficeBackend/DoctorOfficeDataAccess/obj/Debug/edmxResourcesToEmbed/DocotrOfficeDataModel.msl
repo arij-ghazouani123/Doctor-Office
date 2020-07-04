@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DoctorOfficeModelStoreContainer" CdmEntityContainer="DoctorOfficeEntities">
+    <EntitySetMapping Name="Allergies">
+      <EntityTypeMapping TypeName="DoctorOfficeModel.Allergy">
+        <MappingFragment StoreEntitySet="Allergies">
+          <ScalarProperty Name="PatID" ColumnName="PatID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maladies">
+      <EntityTypeMapping TypeName="DoctorOfficeModel.Malady">
+        <MappingFragment StoreEntitySet="Maladies">
+          <ScalarProperty Name="PatID" ColumnName="PatID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="DoctorOfficeModel.Doctor">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visites">
+      <EntityTypeMapping TypeName="DoctorOfficeModel.Visite">
+        <MappingFragment StoreEntitySet="Visites">
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+          <ScalarProperty Name="VisitDateYear" ColumnName="VisitDateYear" />
+          <ScalarProperty Name="VisitDateMonth" ColumnName="VisitDateMonth" />
+          <ScalarProperty Name="IDDoct" ColumnName="IDDoct" />
+          <ScalarProperty Name="IDPat" ColumnName="IDPat" />
+          <ScalarProperty Name="VisitDateDay" ColumnName="VisitDateDay" />
+          <ScalarProperty Name="ToDoNext" ColumnName="ToDoNext" />
+          <ScalarProperty Name="MedsList" ColumnName="MedsList" />
+          <ScalarProperty Name="Consultation" ColumnName="Consultation" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RDVs">
+      <EntityTypeMapping TypeName="DoctorOfficeModel.RDV">
+        <MappingFragment StoreEntitySet="RDVs">
+          <ScalarProperty Name="VisitDateYear" ColumnName="VisitDateYear" />
+          <ScalarProperty Name="VisitDateMonth" ColumnName="VisitDateMonth" />
+          <ScalarProperty Name="VisitDateDay" ColumnName="VisitDateDay" />
+          <ScalarProperty Name="NbreVisits" ColumnName="NbreVisits" />
+          <ScalarProperty Name="NewPat" ColumnName="NewPat" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+          <ScalarProperty Name="IDDoct" ColumnName="IDDoct" />
+          <ScalarProperty Name="PatID" ColumnName="PatID" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nurses">
+      <EntityTypeMapping TypeName="DoctorOfficeModel.Nurse">
+        <MappingFragment StoreEntitySet="Nurses">
+          <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+          <ScalarProperty Name="IDDoct" ColumnName="IDDoct" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="DoctorOfficeModel.Patient">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="IDDoct" ColumnName="IDDoct" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="NbreVisits" ColumnName="NbreVisits" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
